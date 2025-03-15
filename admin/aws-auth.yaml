@@ -1,0 +1,19 @@
+apiVersion: v1
+data:
+  mapRoles: |
+    - groups:
+      - system:bootstrappers
+      - system:nodes
+      rolearn: arn:aws:iam::471112615183:role/eksctl-roboshop-nodegroup-spot-NodeInstanceRole-Lp9r3lXrANd3
+      username: system:node:{{EC2PrivateDNSName}}
+  mapUsers: |
+    - groups:
+      - roboshop-pod-reader
+      userarn: arn:aws:iam::471112615183:user/ramesh
+      username: ramesh
+kind: ConfigMap
+metadata:
+  name: aws-auth
+  namespace: kube-system
+  uid: c545fed5-5d66-41bb-be7b-13e318a33fd2
+#kubectl get configmap -n kube-system aws-auth -o yaml
