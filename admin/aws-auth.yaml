@@ -11,9 +11,9 @@ data:
       - roboshop-pod-reader
       userarn: arn:aws:iam::471112615183:user/ramesh
       username: ramesh
-kind: ConfigMap
+kind: configmap
 metadata:
   name: aws-auth
   namespace: kube-system
-  uid: c545fed5-5d66-41bb-be7b-13e318a33fd2
+  uid: 01b85e1d-22ba-48d6-9ed0-2940b637cf4c
 #kubectl get configmap -n kube-system aws-auth -o yaml
