@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
       - name: cart
-        image: "korrai/cart:{{ .Values.deployment.imageVersion }}"
+        image: "korrai  /cart:{{ .Values.deployment.imageVersion }}"
         imagePullPolicy: Always
         resources:
           requests:
